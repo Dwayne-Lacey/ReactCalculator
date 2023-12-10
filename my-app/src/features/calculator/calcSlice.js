@@ -25,15 +25,11 @@ export const calcSlice = createSlice({
     },
     clearCalcValue: (state) => {
       state.value = "";
-    },
-    setTotal: (state, action) => {
-      state.calcString += action.payload;
-      state.value = "";
     }
   }
 });
 
-export const { updateCalcString, updateCalcValue, clearCalcString, clearCalcValue, setTotal } = calcSlice.actions;
+export const { updateCalcString, updateCalcValue, clearCalcString, clearCalcValue } = calcSlice.actions;
 
 // The function below is called a selector and allows us to select a value from
 // the state. Selectors can also be defined inline where they're used instead of

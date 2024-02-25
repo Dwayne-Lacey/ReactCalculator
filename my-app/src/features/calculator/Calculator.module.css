@@ -1,0 +1,61 @@
+.app {
+    margin: 28% auto;
+    width: 330px;
+}
+
+.keysContainer {
+    width: 100%;
+    max-width: 330px;
+    margin: 0 auto;
+    padding: 2px 0;
+    background-color: rgb(29, 29, 29);
+}
+
+.key {
+    width: 100%;
+    height: 5.8rem;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(78, 78, 78);
+    color: whitesmoke;
+    border: 2px rgb(78, 78, 78) solid;
+    transition: 300ms;
+}
+
+.key:hover {
+    background-color: rgb(32, 32, 32);
+    border: 2px rgb(95, 95, 95) solid;
+}
+
+.rowSpacer {
+    padding: 0;
+    margin: 0;
+}
+
+.colSpacer {
+    margin: 0;
+    padding: 1px;
+    width: calc(25% - 1px);
+}
+
+.clear {
+    width: 100%;
+    padding: 1px 3px;
+}
+
+.history {
+    font-size: 1rem;
+    color: whitesmoke;
+    text-align: right;
+    width: 98%;
+    height: 2rem;
+}
+
+.display {
+    font-size: 2rem;
+    color: whitesmoke;
+    text-align: right;
+    width: 98%;
+    height: 3rem;
+}

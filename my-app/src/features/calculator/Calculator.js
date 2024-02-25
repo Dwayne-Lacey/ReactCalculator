@@ -108,27 +108,80 @@ export function Calculator() {
   };
 
   return (
-    <div>
-      <h3>{calcFunc}</h3>
-      <h3>{calcString}{calcValue}</h3>
-      <h2>{calcValue}</h2>
-      <button onClick={() => {addValue("1", false)}}>1</button>
-      <button onClick={() => {addValue("2", false)}}>2</button>
-      <button onClick={() => {addValue("3", false)}}>3</button>
-      <button onClick={() => {addValue("4", false)}}>4</button>
-      <button onClick={() => {addValue("5", false)}}>5</button>
-      <button onClick={() => {addValue("6", false)}}>6</button>
-      <button onClick={() => {addValue("7", false)}}>7</button>
-      <button onClick={() => {addValue("8", false)}}>8</button>
-      <button onClick={() => {addValue("9", false)}}>9</button>
-      <button onClick={() => {addValue("0", false)}}>0</button>
-      <button onClick={() => {addValue(".", false)}}>.</button>
-      <button id="multiply" onClick={() => {addValue("X", true)}}>X</button>
-      <button id="subtract" onClick={() => {addValue("-", true)}}>-</button>
-      <button id="add" onClick={() => {addValue("+", true)}}>+</button>
-      <button id="divide" onClick={() => {addValue("/", true)}}>/</button>
-      <button onClick={sumCalcString}>=</button>
-      <button onClick={clearMemory}>AC</button>
+    <div className={styles.app}>
+      <div className={"container " + styles.keysContainer}>
+        <div className={"row justify-content-center " + styles.rowSpacer}>
+          <div className={"col-12 " + styles.clear}>
+            <h3 className={styles.history}>{calcString}{calcValue}</h3>
+          </div>
+        </div>
+        <div className={"row justify-content-center " + styles.rowSpacer}>
+          <div className={"col-12 " + styles.clear}>
+            <h2 id="display" className={styles.display}>{calcValue}</h2>
+          </div>
+        </div>
+        <div className={"row justify-content-center " + styles.rowSpacer}>
+          <div className={"col-12 " + styles.clear}>
+            <button id="clear" className={styles.key}  onClick={clearMemory}>AC</button>
+          </div>
+        </div>
+        <div className={"row justify-content-center " + styles.rowSpacer}>
+          <div className={"col-3 " + styles.colSpacer}>
+            <button id="seven" className={styles.key} onClick={() => {addValue("7", false)}}>7</button>
+          </div>
+          <div className={"col-3 " + styles.colSpacer}>
+            <button id="eight" className={styles.key}  onClick={() => {addValue("8", false)}}>8</button>
+          </div>
+          <div className={"col-3 " + styles.colSpacer}>
+            <button id="nine" className={styles.key}  onClick={() => {addValue("9", false)}}>9</button>
+          </div>
+          <div className={"col-3 " + styles.colSpacer}>
+            <button id="add" className={styles.key}  onClick={() => {addValue("+", true)}}>+</button>
+          </div>
+        </div>
+        <div className={"row justify-content-center " + styles.rowSpacer}>
+          <div className={"col-2 " + styles.colSpacer}>
+            <button id="four" className={styles.key}  onClick={() => {addValue("4", false)}}>4</button>
+          </div>
+          <div className={"col-2 " + styles.colSpacer}>
+            <button id="five" className={styles.key}  onClick={() => {addValue("5", false)}}>5</button>
+          </div>
+          <div className={"col-2 " + styles.colSpacer}>
+            <button id="six" className={styles.key}  onClick={() => {addValue("6", false)}}>6</button>
+          </div>
+          <div className={"col-2 " + styles.colSpacer}>
+            <button id="subtract" className={styles.key}  onClick={() => {addValue("-", true)}}>-</button>
+          </div>
+        </div>
+        <div className={"row justify-content-center " + styles.rowSpacer}>
+          <div className={"col-3 " + styles.colSpacer}>
+            <button id="one" className={styles.key}  onClick={() => {addValue("1", false)}}>1</button>
+          </div>
+          <div className={"col-3 " + styles.colSpacer}>
+            <button id="two" className={styles.key}  onClick={() => {addValue("2", false)}}>2</button>
+          </div>
+          <div className={"col-3 " + styles.colSpacer}>
+            <button id="three" className={styles.key}  onClick={() => {addValue("3", false)}}>3</button>
+          </div>
+          <div className={"col-3 " + styles.colSpacer}>
+            <button id="multiply" className={styles.key}  onClick={() => {addValue("X", true)}}>X</button>
+          </div>
+        </div>
+        <div className={"row justify-content-center " + styles.rowSpacer}>
+          <div className={"col-3 " + styles.colSpacer}>
+            <button id="zero" className={styles.key}  onClick={() => {addValue("0", false)}}>0</button>
+          </div>
+          <div className={"col-3 " + styles.colSpacer}>
+            <button id="decimal" className={styles.key}  onClick={() => {addValue(".", false)}}>.</button>
+          </div>
+          <div className={"col-3 " + styles.colSpacer}>
+            <button id="equals" className={styles.key}  onClick={sumCalcString}>=</button>
+          </div>
+          <div className={"col-3 " + styles.colSpacer}>
+            <button id="divide" className={styles.key}  onClick={() => {addValue("/", true)}}>/</button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

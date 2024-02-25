@@ -7,8 +7,10 @@
     width: 100%;
     max-width: 330px;
     margin: 0 auto;
-    padding: 2px 0;
+    padding: 3px 0;
     background-color: rgb(29, 29, 29);
+    border-radius: 5px 5px 0 0;
+    border: 2px solid black;
 }
 
 .key {

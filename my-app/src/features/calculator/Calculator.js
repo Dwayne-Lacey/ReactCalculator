@@ -20,6 +20,10 @@ export function Calculator() {
   };
   const dispatch = useDispatch();
   const addValue = (value, func) => {
+    if (calcValue === "0" && value != "0" && !func) {
+      dispatch(clearCalcValue());
+      dispatch(clearCalcString());
+    }
     if (calcString.includes("=")) {
       dispatch(clearCalcString());
     }
@@ -105,6 +109,7 @@ export function Calculator() {
   const clearMemory = () => {
     dispatch(clearCalcString());
     dispatch(clearCalcValue());
+    addValue("0", false);
   };
 
   return (

@@ -52,6 +52,7 @@
     text-align: right;
     width: 98%;
     height: 2rem;
+    overflow: hidden;
 }
 
 .display {
